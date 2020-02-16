@@ -10,7 +10,7 @@ rpmbuild --rebuild **package-name**.src.rpm
 rpmbuild --bb ~/rpmbuild/SPECS/**package-name**.spec  
   
 ### Build without debuginfo  
-rpmbuild --define "debug_package %{nil}" --rebuild  **package-name**.src.rpm  
+rpmbuild --rebuild --define "debug_package %{nil}" --rebuild  **package-name**.src.rpm  
 rpmbuild --bb --define "debug_package %{nil}" ~/rpmbuild/SPECS/**package-name**.spec  
   
 ### Modify binary rpm  
