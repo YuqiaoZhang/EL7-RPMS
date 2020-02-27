@@ -1,4 +1,4 @@
-I suggest use **sddm** from **epel** repository and use the following instructions to switch to **sddm** display manager.  
+I suggest use **lightdm** from **epel** repository and use the following instructions to switch to **lightdm** display manager.  
 ```  
-systemctl enable sddm
+systemctl enable lightdm
 ```  
