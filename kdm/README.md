@@ -5,8 +5,11 @@ Install **lightdm** from **epel** repository and use the following instructions 
 systemctl enable lightdm
 ```  
 
-Edit **/etc/lightdm/lightdm.conf** and add the following lines to allow manual login.  
+Edit **/etc/lightdm/lightdm.conf** and delete the **#** before **greeter-show-manual-login=false** under **\[Seat:\*\]** and modify the **false** to **true** to allow manual login.  
 ```  
-[SeatDefaults]
+    ...
+[Seat:*]
+    ...
 greeter-show-manual-login=true
+    ...
 ```  
