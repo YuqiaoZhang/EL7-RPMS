@@ -1,15 +1,15 @@
-I prefer **lightdm** than **kdm**.  
+I prefer **sddm** than **kdm**.  
 
-Install **lightdm** from **epel** repository and use the following instructions to switch to **lightdm** display manager.  
+Install **sddm** and **sddm-themes** from **epel** repository and use the following instructions to switch to **sddm** display manager.  
 ```  
-systemctl enable lightdm
+systemctl enable sddm
 ```  
 
-Edit **/etc/lightdm/lightdm.conf** and delete the **#** before **greeter-show-manual-login=false** under **\[Seat:\*\]** and modify the **false** to **true** to allow manual login.  
+Edit **/etc/sddm.conf** and delete the **#** before **MinimumUid=1000** under **\[Users]** and modify the **1000** to **0** to allow root login.  
 ```  
     ...
-[Seat:*]
+[Users]
     ...
-greeter-show-manual-login=true
+MinimumUid=0
     ...
 ```  
